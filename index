@@ -1,0 +1,40 @@
+Practical NO-04
+
+login butbucket
+Create new repository.
+setting.
+personal bitbucket setting
+app password
+Create app password
+label:
+option tick all
+Create
+copy the password
+open terminal in folder
+bitbucket
+project
+select project
+↓
+myproject
+Clone
+↓
+copy link (token)
+past URL in terminal
+token password
+Cd Myproject
+touch index.html
+git status
+git add index.html
+git status
+git commit -m "vs"
+git status
+git push origin main
+(home) git branch name
+checkout home git
+touch style. css
+git add.
+git status
+git commit -m "16"
+git status
+Pull request
+merge
