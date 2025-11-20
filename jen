@@ -1,0 +1,53 @@
+Jenkins -
+   * Open Terminal
+   * java -jar jenkins.war -httpPort 8081
+   * Give and Forwarding link - open in browser
+   * (Right click)
+   * then wait site
+   * Go to the jenkins
+   * click on new item
+   * Enter Name - demo
+   * click on freestyle project
+   * ok
+   * then in general click on source code management
+   * choose git
+   * For Repo URL (have git repo)
+   * Branch specifier check main or master
+   * Build Triggers
+     * click GitHub hook trigger for GIt SCM polling
+   * Apply then save
+   * Go to github account
+   * select option settings
+   * then select webhooks
+   * Add webhook
+   * pwd (set githubpwd)
+   * payload URL for (forwarding jenkins)
+   *      * github-webhook/
+   * content type JSON select - application
+   * send everything - select
+   * Add webhook
+   * Refresh page & check green tick
+Right Page (Top to Bottom)
+* Then build now (green)
+* Workspace (green)
+   * change (edit code index.html) - small change
+   * git add .
+   * git commit -m "changed index"
+   * git push
+* Now Go
+   * where location submit - your jenkins
+   * open terminal from there
+   *      * Add cmd - sudo mkdir new
+   *      * jenkins
+   *      * configure
+   *      * Add build step \rightarrow Execute shell
+   *      * write cmd \rightarrow cp */*.war/user/new/html/
+   *      * Apply, save
+   *      * Build Now \rightarrow click
+   *      * Open \rightarrow terminal from folder new
+   *      * Add cmd - sudo chown -R jenkins jenkins war.www/html/new
+   *      * Post @csc@19
+* Build Now click
+   * Go to the browser
+   * Type 0.0.0.0/new/index.html
+   * \rightarrow Enter then do step of build
